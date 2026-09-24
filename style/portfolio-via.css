@@ -1,0 +1,323 @@
+/* VARIABLES */
+
+:root {
+  --primary: #6d5dfc;
+
+  --text-main: #1f2937;
+  --text-light: #747b89;
+
+  --background: #f8f9ff;
+  --white: #ffffff;
+
+  --border: #e9eaf2;
+
+  --container-width: 1120px;
+  --header-height: 78px;
+}
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+
+  background: var(--background);
+  color: var(--text-main);
+
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* CONTAINER */
+
+.container {
+  width: 90%;
+  max-width: var(--container-width);
+
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+  background: var(--white);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  min-height: var(--header-height);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* NAVIGATION */
+
+.nav-menu {
+  display: flex;
+
+  gap: 35px;
+}
+
+.nav-menu a {
+  padding: 25px 0;
+
+  font-size: 15px;
+
+  color: #5b6170;
+}
+
+.nav-menu a:hover {
+  color: var(--primary);
+}
+
+.nav-menu a.active {
+  color: var(--primary);
+
+  font-weight: 600;
+}
+
+/* PORTFOLIO HERO */
+
+.portfolio-hero {
+  padding: 80px 0 70px;
+
+  background: linear-gradient(135deg, #ffffff, #f4f5ff);
+}
+
+.small-title {
+  margin-bottom: 15px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  color: var(--primary);
+}
+
+.portfolio-hero h1 {
+  margin-bottom: 20px;
+
+  font-size: 52px;
+  line-height: 1.1;
+
+  color: #1f2430;
+}
+
+.portfolio-hero h1 span {
+  color: var(--primary);
+}
+
+.portfolio-intro {
+  max-width: 650px;
+
+  font-size: 17px;
+  line-height: 1.8;
+
+  color: var(--text-light);
+}
+
+/* PROJECTS */
+
+.projects {
+  padding: 80px 0;
+
+  background: var(--background);
+}
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+}
+
+/* PROJECT CARD */
+
+.project-card {
+  overflow: hidden;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 230px;
+
+  object-fit: cover;
+
+  background: #eeeef5;
+}
+
+/* PROJECT CONTENT */
+
+.project-content {
+  padding: 28px;
+}
+
+.project-content h2 {
+  margin-bottom: 12px;
+
+  font-size: 22px;
+
+  color: #1f2430;
+}
+
+.project-content > p {
+  margin-bottom: 20px;
+
+  font-size: 15px;
+  line-height: 1.7;
+
+  color: var(--text-light);
+}
+
+/* TECHNOLOGIES */
+
+.project-tech {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 22px;
+}
+
+.project-tech span {
+  padding: 7px 12px;
+
+  background: #f1f0ff;
+
+  border: 1px solid #dfdcff;
+  border-radius: 10px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #5648d8;
+}
+
+/* PROJECT LINK */
+
+.project-link {
+  display: inline-block;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: var(--primary);
+}
+
+.project-link:hover {
+  color: #5b4df7;
+}
+
+/* FOOTER */
+
+.footer {
+  background: var(--white);
+
+  border-top: 1px solid var(--border);
+}
+
+.footer-content {
+  min-height: 60px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .nav-menu {
+    gap: 25px;
+  }
+
+  .portfolio-hero h1 {
+    font-size: 44px;
+  }
+
+  .projects-grid {
+    gap: 22px;
+  }
+
+  .project-card img {
+    height: 210px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .nav {
+    justify-content: center;
+
+    padding: 15px 0;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px 25px;
+  }
+
+  .nav-menu a {
+    padding: 5px 0;
+  }
+
+  .portfolio-hero {
+    padding: 70px 0 60px;
+
+    text-align: center;
+  }
+
+  .portfolio-hero h1 {
+    font-size: 40px;
+  }
+
+  .portfolio-intro {
+    margin: 0 auto;
+
+    font-size: 16px;
+  }
+
+  .projects {
+    padding: 60px 0;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card img {
+    height: 220px;
+  }
+
+  .project-content {
+    padding: 24px;
+  }
+}
