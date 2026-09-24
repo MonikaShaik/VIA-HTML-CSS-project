@@ -1,0 +1,43 @@
+.container {
+  width: 90%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  min-height: var(--header-height);
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* NAVIGATION */
+
+.nav-menu {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-menu a {
+  padding: 25px 0;
+
+  font-size: 15px;
+  color: #5b6170;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--primary);
+}
+
+.nav-menu a.active {
+  font-weight: 600;
+}
